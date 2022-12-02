@@ -1,0 +1,38 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "description": "JS Solutions to Advent of Code puzzles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint",
+    "check-style": "prettier --check .",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ceciliahaentjens/advent-of-code.git"
+  },
+  "keywords": [
+    "advent-of-code",
+    "adventofcode"
+  ],
+  "author": "ceciliahaentjens",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ceciliahaentjens/advent-of-code/issues"
+  },
+  "homepage": "https://github.com/ceciliahaentjens/advent-of-code#readme",
+  "dependencies": {
+    "fs-extra": "^11.1.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "eslint": "^8.28.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.0"
+  }
+}
