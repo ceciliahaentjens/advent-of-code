@@ -5,16 +5,12 @@ The jungle must be too overgrown and difficult to navigate in vehicles or access
 The Elves take turns writing down the number of Calories contained by the various meals, snacks, rations, etc. that they've brought with them, one item per line. Each Elf separates their own inventory from the previous Elf's inventory (if any) by a blank line.<br>
 [See here for examples](https://adventofcode.com/2022/day/1)
 
----
-
 ## Part 1
 
 In case the Elves get hungry and need extra snacks, they need to know which Elf to ask: they'd like to know how many Calories are being carried by the Elf carrying the most Calories. In the example above, this is 24000 (carried by the fourth Elf).
 
 Find the Elf carrying the most Calories. <b>How many total Calories is that Elf carrying&nbsp;?<br />
 ⭐️ Answer&nbsp;: `65912`</b>
-
----
 
 ## Part 2
 
