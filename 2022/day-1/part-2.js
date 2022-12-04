@@ -1,8 +1,6 @@
-const { readInput } = require("../../helpers/input");
+const { data } = require("./helper");
 
-const input = readInput(__dirname);
-
-const threeHighestKcal = input
+const threeHighestKcal = data
   .map((elf) =>
     elf
       .split("\n")
