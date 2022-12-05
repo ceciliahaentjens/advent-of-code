@@ -1,4 +1,4 @@
-const { data } = require("./helper");
+const { data } = require("./data");
 
 // Score
 const score = {

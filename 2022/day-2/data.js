@@ -1,4 +1,4 @@
-const { readData } = require("../../helpers/data");
+const { readData } = require("../../helpers/input");
 
 // Read data
 const data = readData(__dirname)
