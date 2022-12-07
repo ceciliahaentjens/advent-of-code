@@ -1,4 +1,4 @@
-const { readData } = require("../../helpers/input");
+const { readData } = require("../../../helpers/input");
 
 const [stackssData, instructionsData] = readData(__dirname).split("\n\n");
 

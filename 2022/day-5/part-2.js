@@ -1,4 +1,4 @@
-const { stacks, instructions } = require("./data");
+const { stacks, instructions } = require("./data/data");
 
 instructions.forEach((instruction) => {
   const toMove = stacks[instruction.from].splice(0, instruction.move);

@@ -1,5 +1,5 @@
-const { data } = require("./data");
-const { findSameChar, getPriority, sliceGroups } = require("./helper");
+const { data } = require("./data/data");
+const { findSameChar, getPriority, sliceGroups } = require("./helpers/helper");
 
 const groups = sliceGroups(data);
 

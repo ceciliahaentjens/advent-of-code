@@ -1,5 +1,5 @@
-const { data } = require("./data");
-const { findSameChar, getPriority } = require("./helper");
+const { data } = require("./data/data");
+const { findSameChar, getPriority } = require("./helpers/helper");
 
 const total = data
   .map((rucksack) => {
