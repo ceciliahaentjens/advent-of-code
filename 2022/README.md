@@ -16,3 +16,5 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 - [Day 2](/2022/day-2/) ★★
 - [Day 3](/2022/day-3/) ★★
 - [Day 4](/2022/day-4/) ★★
+- [Day 5](/2022/day-5/) ★★
+- [Day 6](/2022/day-6/) ★★

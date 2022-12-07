@@ -1,4 +1,4 @@
-const { data } = require("./data");
+const { data } = require("./data/data");
 
 const pairs = data.filter(([aElf, bElf]) => {
   const [aFrom, aTo] = aElf;

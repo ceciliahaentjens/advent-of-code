@@ -1,4 +1,4 @@
-const { data } = require("./data");
+const { data } = require("./data/data");
 
 const threeHighestKcal = data
   .map((elf) =>
