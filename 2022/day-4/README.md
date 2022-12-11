@@ -1,5 +1,10 @@
 # 🧹 Day 4 – Camp Cleanup
 
+- [Answers and notes](#part-1) for Part One
+- [Answers and notes](#part-2) for Part Two
+
+## Instructions
+
 Space needs to be cleared before the last supplies can be unloaded from the ships, and so several Elves have been assigned the job of cleaning up sections of the camp. Every section has a unique ID number, and each Elf is assigned a range of section IDs.
 
 However, as some of the Elves compare their section assignments with each other, they've noticed that many of the assignments overlap. To try to quickly find overlaps and reduce duplicated effort, the Elves pair up and make a big list of the section assignments for each pair (your puzzle input).
@@ -42,14 +47,27 @@ This example list uses single-digit section IDs to make it easier to draw; your 
 ...45678.  4-8
 ```
 
-## Part 1
-
 Some of the pairs have noticed that one of their assignments fully contains the other. For example, `2-8` fully contains `3-7`, and `6-6` is fully contained by `4-6`. In pairs where one assignment fully contains the other, one Elf in the pair would be exclusively cleaning sections their partner will already be cleaning, so these seem like the most in need of reconsideration. In this example, there are <b>`2` such pairs</b>.
 
-<b>In how many assignment pairs does one range fully contain the other&nbsp;?<br />
-⭐️ Answer&nbsp;: `556`</b>
+## Part One
 
-## Part 2
+<b>In how many assignment pairs does one range fully contain the other&nbsp;? Answer&nbsp;: `556`</b>
+
+### Notes
+
+To get the assignment pairs where a range fully contains the other, I destructured to get each `from` and `to` value of each `range`.<br />
+For example, in the `2-8,3-7` assignment pair, `2-8`is the first section (`aRange`), and `3-7` is the second one (`bRange`). Then, `2` is the first range `from` value and `8` the `to`. For the second one, `3` is `from` and `3` is `to`.
+
+In this case, `2-8` fully contains `3-7` because `2 < 3` and `8 > 7`. As each value can also be equals, we can translate this deduction by the following condition `if (aFrom >= bFrom && aTo <= bTo)`. However, the opposite can happen so the full condition to know if a range fully contains the other would be&nbsp;:
+
+```js
+return (aFrom >= bFrom && aTo <= bTo) || (bFrom >= aFrom && bTo <= aTo);
+```
+
+To get the number of pairs, I then needed to filter the `sections` array with the previous condition and get the `length` of the filtered array.
+
+
+## Part Two
 
 It seems like there is still quite a bit of duplicate work planned. Instead, the Elves would like to know the number of pairs that overlap at all.
 
@@ -61,5 +79,12 @@ In the above example, the first two pairs (`2-4,6-8` and `2-3,4-5`) don't overla
 `2-6,4-8` overlaps in sections `4`, `5`, and `6`.
 So, in this example, the number of <b>overlapping assignment pairs is `4`</b>.
 
-<b>In how many assignment pairs do the ranges overlap&nbsp;?<br />
-⭐️ Answer&nbsp;: `876`</b>
+<b>In how many assignment pairs do the ranges overlap&nbsp;? Answer&nbsp;: `876`</b>
+
+### Notes
+
+I started from the same beginning as for the part one but used a different condition. To know if a `range` partially overlapses an other, I just need to know if the `to` value of one `range` <b>wasn’t</b> lower than the `from` value of the other which resulted in the following filter condition&nbsp;:
+
+```js
+return !(aTo < bFrom || bTo < aFrom);
+```
