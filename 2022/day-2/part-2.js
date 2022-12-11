@@ -1,4 +1,4 @@
-const { data } = require("./data/data");
+const { data: rounds } = require("./data/data");
 
 const score = {
   A: {
@@ -18,8 +18,8 @@ const score = {
   },
 };
 
-const total = data
-  .map(([opponent, instruction]) => score[opponent][instruction])
+const total = rounds
+  .map(([aPlayer, instruction]) => score[aPlayer][instruction])
   .reduce((a, b) => a + b);
 
 console.log(total);

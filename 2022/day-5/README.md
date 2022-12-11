@@ -1,10 +1,13 @@
 # 📦 Day 5 – Supply Stacks
 
+- [Answers and notes](#part-1) for Part One
+- [Answers and notes](#part-2) for Part Two
+
+## Instructions
+
 The expedition can depart as soon as the final supplies have been unloaded from the ships. Supplies are stored in stacks of marked crates, but because the needed supplies are buried under many other crates, <b>the crates need to be rearranged</b>.
 
 The ship has a giant cargo crane capable of moving crates between stacks. To ensure none of the crates get crushed or fall over, the crane operator will rearrange them in a series of carefully-planned steps. After the crates are rearranged, the desired crates will be at the top of each stack.
-
-## Part 1
 
 The Elves don't want to interrupt the crane operator during this delicate procedure, but they forgot to ask her which crate will end up where, and they want to be ready to unload them as soon as possible so they can embark.
 
@@ -43,32 +46,19 @@ In the second step, three crates are moved from stack 1 to stack 3. Crates are m
  1   2   3
 ```
 
-Then, both crates are moved from stack 2 to stack 1. Again, because crates are moved one at a time, crate `C` ends up below crate `M`:
-
-```
-        [Z]
-        [N]
-[M]     [D]
-[C]     [P]
- 1   2   3
-```
-
-Finally, one crate is moved from stack 1 to stack 2:
-
-```
-        [Z]
-        [N]
-        [D]
-[C] [M] [P]
- 1   2   3
-```
+See more of the example [here](https://adventofcode.com/2022/day/5)
 
 The Elves just need to know which crate will end up on top of each stack; in the example above, the top crates are `C` in stack 1, `M` in stack 2, and Z in stack `3`, so you should combine these together and give the Elves the message `CMZ`.
 
-<b>After the rearrangement procedure completes, what crate ends up on top of each stack&nbsp;?<br />
-⭐️ Answer&nbsp;: `CFFHVVHNC`</b>
+## Part One
 
-## Part 2
+<b>After the rearrangement procedure completes, what crate ends up on top of each stack&nbsp;? Answer&nbsp;: `CFFHVVHNC`</b>
+
+### Notes
+
+...
+
+## Part Two
 
 As you watch the crane operator expertly rearrange the crates, you notice the process isn't following your prediction.
 
@@ -103,5 +93,8 @@ However, the action of moving three crates from stack 1 to stack 3 means that th
 
 In this example, the CrateMover 9001 has put the crates in a totally different order&nbsp;: `MCD`.
 
-Before the rearrangement process finishes, update your simulation so that the Elves know where they should stand to be ready to unload the final supplies. <b>After the rearrangement procedure completes, what crate ends up on top of each stack&nbsp;?<br />
-⭐️ Answer&nbsp;: `FSZWBPTBG`</b>
+Before the rearrangement process finishes, update your simulation so that the Elves know where they should stand to be ready to unload the final supplies. <b>After the rearrangement procedure completes, what crate ends up on top of each stack&nbsp;? Answer&nbsp;: `FSZWBPTBG`</b>
+
+### Notes
+
+...

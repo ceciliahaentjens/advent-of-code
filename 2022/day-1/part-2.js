@@ -1,6 +1,6 @@
-const { data } = require("./data/data");
+const { data: elves } = require("./data/data");
 
-const threeHighestKcal = data
+const threeHighestKcal = elves
   .map((elf) =>
     elf
       .split("\n")

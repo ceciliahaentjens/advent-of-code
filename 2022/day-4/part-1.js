@@ -1,8 +1,8 @@
-const { data } = require("./data/data");
+const { data: sections } = require("./data/data");
 
-const pairs = data.filter(([aElf, bElf]) => {
-  const [aFrom, aTo] = aElf;
-  const [bFrom, bTo] = bElf;
+const pairs = sections.filter(([aRange, bRange]) => {
+  const [aFrom, aTo] = aRange;
+  const [bFrom, bTo] = bRange;
 
   return (aFrom >= bFrom && aTo <= bTo) || (bFrom >= aFrom && bTo <= aTo);
 });

@@ -1,4 +1,4 @@
-const { data } = require("./data/data");
+const { data: rounds } = require("./data/data");
 
 // Score
 const score = {
@@ -10,23 +10,23 @@ const score = {
   Z: 3,
 };
 
-const total = data
-  .map(([opponent, me]) => {
-    const oScore = score[opponent];
-    const mScore = score[me];
+const total = rounds
+  .map(([aPlayer, bPlayer]) => {
+    const aScore = score[aPlayer];
+    const bScore = score[bPlayer];
 
     // It’s a draw
     // A vs X | B vs Y | C vs Z
-    if (mScore === oScore) {
-      return mScore + 3;
+    if (bScore === aScore) {
+      return bScore + 3;
     }
     // It’s a win
     // C vs X | A vs Y | B vs Z
-    if (mScore - oScore === 1 || mScore - oScore === -2) {
-      return mScore + 6;
+    if (bScore - aScore === 1 || bScore - aScore === -2) {
+      return bScore + 6;
     }
     // It’s a loss
-    return mScore;
+    return bScore;
   })
   .reduce((a, b) => a + b);
 

@@ -1,8 +1,7 @@
-const { data } = require("./data/data");
+const { data: rucksacks } = require("./data/data");
 const { findSameChar, getPriority, sliceGroups } = require("./helpers/helper");
 
-const groups = sliceGroups(data);
-
+const groups = sliceGroups(rucksacks);
 const total = groups
   .map((group) => {
     const char = findSameChar(group);
