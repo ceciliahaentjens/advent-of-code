@@ -6,7 +6,7 @@ module.exports = {
     // Force semicolons
     semi: ["error", "always"],
     // Use 2 spaces to indent our code
-    indent: ["error", 2],
+    indent: ["error", 2, { SwitchCase: 1 }],
     // Avoid unnecessary spaces
     "no-trailing-spaces": ["error"],
   },
