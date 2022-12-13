@@ -18,8 +18,9 @@ The Elves take turns writing down the number of Calories contained by the variou
 
 For this part, I just splitted `elves` in an array and mapped it. I splitted again each `elf` to get their carried calories and used `reduce` to get their `total calories`.<br />
 To get the `elf` carrying more calories, I chose to `reduce` again the `elves` array with a simple operation&nbsp:<br />
+
 ```js
-elves.reduce((prev, cur) => (cur > prev ? cur : prev))
+elves.reduce((prev, cur) => (cur > prev ? cur : prev));
 ```
 
 > I’ve realised later, regarding of the <b>second part</b>, that it might have been better for performance to `sort` the array and return the first value instead of using the `reduce` method.

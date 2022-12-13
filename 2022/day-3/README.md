@@ -44,9 +44,10 @@ In the above example, the priority of the item type that appears in both compart
 ---
 
 ### Notes
+
 I started by decomposing instructions and ended up with the conclusion that I first needed to find the same character in a `rucksack` and then get the `priority` of this character. I’ve created two helper function to do this that you can check [here](/2022/day-3/helpers/helper.js).
 
-`findSameChar` takes an array of `strings` and uses the first one as a `ref` string. Then, I’m looping through each character (`ref[i]`) of the `ref` string and then looping through the `comparisons` strings (`comparisons[c]`). The second string of the `comparisons` array is like a « second ref string »&nbsp;: if the character we’re on is in this « second ref string », I keep it in a `sameChars` array (if not already in it). 
+`findSameChar` takes an array of `strings` and uses the first one as a `ref` string. Then, I’m looping through each character (`ref[i]`) of the `ref` string and then looping through the `comparisons` strings (`comparisons[c]`). The second string of the `comparisons` array is like a « second ref string »&nbsp;: if the character we’re on is in this « second ref string », I keep it in a `sameChars` array (if not already in it).
 
 ```js
 if (charPos > -1 && c === 0 && !sameChars.includes(ref[i])) { ... }
@@ -62,7 +63,7 @@ if (charPos === -1 && c > 0 && sameChars.includes(char)) { ... }
 
 `getPriority` takes a character and returns its priority. As the priority corresponds to the character position in the alphabet, I used `ASCII` to calculate it. In ASCII, the alphabet starts at `97` but we need it to start at `1` so we retrieve `96` from the `charCodeAt()` result. if we only do this, uppercase letters won’t return the right value because the uppercase alphabet has a totally different ASCII value. Then, I returned the ASCII value of the `toLowerCase()` value of the character and first added `26` to the result because, for example, we want `A` to value `27` instead of `1`.
 
-- 
+-
 
 ## Part 2
 

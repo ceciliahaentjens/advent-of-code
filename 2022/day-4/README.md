@@ -66,7 +66,6 @@ return (aFrom >= bFrom && aTo <= bTo) || (bFrom >= aFrom && bTo <= aTo);
 
 To get the number of pairs, I then needed to filter the `sections` array with the previous condition and get the `length` of the filtered array.
 
-
 ## Part Two
 
 It seems like there is still quite a bit of duplicate work planned. Instead, the Elves would like to know the number of pairs that overlap at all.
