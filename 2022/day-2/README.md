@@ -23,7 +23,7 @@ B X
 C Z
 ```
 
-In this example, if you were to follow the strategy guide, you would get a total score of `15` (`8 + 1 + 6`). 
+In this example, if you were to follow the strategy guide, you would get a total score of `15` (`8 + 1 + 6`).
 [See more](https://adventofcode.com/2022/day/2)
 
 ## Part One
@@ -46,12 +46,12 @@ const score = {
 ```
 
 Then, I mapped the array to replace the `round` by the `score` of `bPlayer` according to certain conditions&nbsp;:
+
 - If `(bScore === aScore)`, it’s a draw.
 - If `(bScore - aScore === 1 || bScore - aScore === -2)`, it’s a win because it means we either played `C` against `X` resulting in a total score of `2`, either `B` against `X` or `C` against `Z` resulting in a total score of `-1`.
 - Else, it means it’s a loss.
 
 To get the final result, I just needed to reduce the array by an addition of all values.
-
 
 ## Part Two
 

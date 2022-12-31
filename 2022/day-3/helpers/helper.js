@@ -37,7 +37,7 @@ function getPriority(char) {
 
   // In ASCII, the lowercase alphabet starts at 97 number
   // but we need 1 so we substract 96
-  return priority + ((char.toLowerCase()).charCodeAt(0) - 96);
+  return priority + (char.toLowerCase().charCodeAt(0) - 96);
 }
 
 // Divide an array in groups of 3
